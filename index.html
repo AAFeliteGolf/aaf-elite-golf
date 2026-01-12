@@ -70,23 +70,24 @@
       background: rgba(255,255,255,.04);
       color:var(--muted); font-size:13px; font-weight:600;
     }
-      .photo{
+      .photoWrap{
   width:100%;
-  aspect-ratio: 4/5;
   border-radius: var(--radius);
   border:1px solid rgba(35,48,68,.85);
-
-  background:
-    linear-gradient(135deg, rgba(96,165,250,.20), rgba(34,197,94,.12)),
-    url('ayden.jpg') center/cover no-repeat;
-
-  position:relative;
   overflow:hidden;
+  background: rgba(255,255,255,.03);
 }
 
-/* Remove placeholder overlay */
-.photo::after{
-  content:"";
+.photoWrap img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  aspect-ratio: 4/5;
+}
+
+@media (max-width: 920px){
+  .photoWrap img{ aspect-ratio: 16/10; }
 }
 
     section{margin-top:26px}
@@ -170,8 +171,9 @@
       </p>
     </div>
 
-    <div class="photo" aria-label="Ayden photo placeholder"></div>
-  </div>
+  <div class="photoWrap" aria-label="Ayden photo">
+  <img src="ayden.jpg" alt="Ayden Febres holding trophy" />
+</div>
 
   <section id="about">
     <div class="card">
@@ -334,4 +336,5 @@
 </script>
 </body>
 </html>
+
 
