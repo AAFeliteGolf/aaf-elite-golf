@@ -1,381 +1,475 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AAF Elite Golf | Sponsorship</title>
-  <meta name="description" content="AAF Elite Golf — Osceola County business partnership opportunities supporting elite junior golfer Ayden A. Febres." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AAF Elite Golf | Ayden A. Febres</title>
+  <meta name="description" content="AAF Elite Golf supports elite junior golfer Ayden A. Febres through national and international competition. Sponsorship opportunities available." />
 
   <style>
     :root{
-      --green:#1f7a5a;
-      --green-dark:#155a43;
-      --gold:#b59a5b;
-      --ink:#151515;
-      --muted:#5f6b65;
-      --bg:#f6f7f6;
-      --card:#ffffff;
-      --line:#e6ebe8;
-      --shadow: 0 10px 30px rgba(0,0,0,.08);
-      --radius:18px;
+      --bg:#0b0f14;
+      --panel:#0f1623;
+      --text:#e8eef7;
+      --muted:#a7b1c2;
+      --border:#223146;
+      --accent:#60a5fa;
+      --accent2:#22c55e;
+      --max:1100px;
+      --r:18px;
     }
-
-    *{ box-sizing:border-box; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--ink);
-      background: radial-gradient(1200px 600px at 20% -10%, rgba(31,122,90,.10), transparent 60%),
-                  radial-gradient(900px 500px at 100% 0%, rgba(181,154,91,.10), transparent 50%),
-                  var(--bg);
-      line-height:1.45;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 15% -10%, rgba(96,165,250,.22), transparent 60%),
+        radial-gradient(900px 500px at 90% 0%, rgba(34,197,94,.16), transparent 55%),
+        var(--bg);
+      line-height:1.5;
     }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
 
-    a{ color:var(--green-dark); text-decoration:none; }
-    a:hover{ text-decoration:underline; }
-
-    .wrap{ max-width: 1050px; margin:0 auto; padding: 24px; }
-
-    /* Top bar */
-    .topbar{
-      position: sticky;
-      top:0;
-      z-index:10;
-      background: rgba(246,247,246,.85);
+    header{
+      position:sticky; top:0; z-index:20;
+      background:rgba(11,15,20,.78);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
+      border-bottom:1px solid rgba(34,49,70,.6);
     }
-    .topbar .inner{
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:16px;
-      padding: 14px 24px;
-      max-width:1050px;
-      margin:0 auto;
+      gap:14px;
     }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-weight:800;
-      letter-spacing:.2px;
+    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px}
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(96,165,250,.95), rgba(34,197,94,.95));
+      display:grid; place-items:center; color:#071018; font-weight:900;
     }
-    .dot{
-      width:10px; height:10px; border-radius:999px;
-      background: linear-gradient(135deg, var(--green), var(--gold));
-      box-shadow: 0 0 0 4px rgba(31,122,90,.12);
-    }
-    nav{
-      display:flex; gap:14px; flex-wrap:wrap;
-      font-weight:600;
-      color:var(--muted);
-    }
-    nav a{ color:var(--muted); }
-    nav a:hover{ color:var(--ink); text-decoration:none; }
+    .links{display:flex; gap:14px; flex-wrap:wrap; font-size:14px; color:var(--muted)}
+    .links a{color:var(--muted)}
+    .links a:hover{color:var(--text); text-decoration:none}
 
-    /* Hero */
-    .hero{
-      padding: 26px 0 14px;
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 60px}
+    .section{margin-top:22px}
+    .panel{
+      background: linear-gradient(180deg, rgba(17,27,42,.82), rgba(17,27,42,.62));
+      border:1px solid rgba(34,49,70,.75);
+      border-radius:var(--r);
+      box-shadow: 0 14px 40px rgba(0,0,0,.28);
+      overflow:hidden;
     }
-    .heroCard{
-      background: linear-gradient(135deg, rgba(31,122,90,.10), rgba(181,154,91,.08));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 26px;
-      box-shadow: var(--shadow);
-    }
+    .pad{padding:22px}
     .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      font-weight:700;
-      color:var(--green-dark);
-      font-size: 13px;
-      letter-spacing:.3px;
-      text-transform: uppercase;
+      color:var(--muted);
+      font-weight:750;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      font-size:12px;
     }
-    .kicker span{
-      width:34px; height:2px; background:var(--gold); display:inline-block;
-      border-radius: 10px;
-    }
-    h1{
-      margin:10px 0 8px;
-      font-size: clamp(26px, 3.6vw, 42px);
-      line-height: 1.1;
-      letter-spacing: -0.5px;
-    }
-    .sub{
-      margin: 0;
-      color: var(--muted);
-      font-size: 16px;
-      max-width: 72ch;
-    }
-    .metaRow{
-      margin-top: 16px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-    .pill{
-      background: rgba(255,255,255,.75);
-      border: 1px solid var(--line);
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-    .pill b{ color: var(--ink); }
+    h1{margin:10px 0 10px; font-size:44px; line-height:1.06}
+    h2{margin:0 0 10px; font-size:22px}
+    p{margin:0}
+    .sub{color:var(--muted); font-size:16px; margin-top:10px}
 
-    /* Sections */
-    section{
-      padding: 22px 0;
-    }
-    .sectionTitle{
-      margin: 0 0 10px;
-      font-size: 18px;
-      letter-spacing: -0.2px;
-    }
-    .sectionLead{
-      margin: 0 0 14px;
-      color: var(--muted);
-      max-width: 80ch;
-    }
-
-    /* Cards */
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 14px;
-    }
-    .card{
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 16px;
-      box-shadow: 0 8px 18px rgba(0,0,0,.05);
-    }
-    .card h3{
-      margin:0 0 6px;
-      font-size: 16px;
-      letter-spacing:-0.2px;
-    }
-    .price{
-      font-weight:800;
-      color: var(--green-dark);
-    }
-    .tag{
-      display:inline-block;
-      margin-top: 8px;
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(31,122,90,.25);
-      background: rgba(31,122,90,.06);
-      color: var(--green-dark);
-      font-weight: 700;
-    }
-    .muted{ color: var(--muted); }
-
-    .tier1{ grid-column: span 12; }
-    .tier2{ grid-column: span 12; }
-    .tier3{ grid-column: span 12; }
-
-    @media (min-width: 860px){
-      .tier1{ grid-column: span 4; }
-      .tier2{ grid-column: span 4; }
-      .tier3{ grid-column: span 4; }
-    }
-
-    /* Standards box */
-    .standards{
-      border-left: 4px solid var(--green);
-      background: rgba(31,122,90,.05);
-    }
-    ul{
-      margin: 10px 0 0 18px;
-      padding: 0;
-    }
-    li{ margin: 6px 0; }
-
-    /* Footer */
-    footer{
-      padding: 28px 0 40px;
-      border-top: 1px solid var(--line);
-      margin-top: 18px;
-    }
-    .footerGrid{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 14px;
-    }
-    .footerGrid .card{ box-shadow:none; }
-    .col8{ grid-column: span 12; }
-    .col4{ grid-column: span 12; }
-    @media (min-width: 860px){
-      .col8{ grid-column: span 8; }
-      .col4{ grid-column: span 4; }
-    }
-
-    .btnRow{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px; }
+    .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
     .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 10px 14px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: white;
-      font-weight: 800;
-      color: var(--ink);
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 16px; border-radius:14px;
+      border:1px solid rgba(96,165,250,.40);
+      background: rgba(96,165,250,.12);
+      color:var(--text);
+      font-weight:750;
     }
-    .btn.primary{
-      background: linear-gradient(135deg, var(--green), var(--green-dark));
-      color: white;
-      border-color: transparent;
+    .btn:hover{background: rgba(96,165,250,.18); text-decoration:none}
+    .btn.alt{border-color: rgba(34,197,94,.45); background: rgba(34,197,94,.10)}
+    .btn.alt:hover{background: rgba(34,197,94,.14)}
+    .btn.ghost{border-color: rgba(255,255,255,.16); background: rgba(255,255,255,.04)}
+    .btn.ghost:hover{background: rgba(255,255,255,.06)}
+
+    /* HERO */
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:0;
+      align-items:stretch;
     }
-    .btn:hover{ text-decoration:none; transform: translateY(-1px); transition:.15s ease; }
+    .heroText{padding:26px}
+    .heroMedia{
+      min-height:420px;
+      position:relative;
+      border-left:1px solid rgba(34,49,70,.75);
+      background: rgba(255,255,255,.03);
+    }
+    .heroMedia img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+    }
+    .heroMedia::after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(11,15,20,.10), rgba(11,15,20,.52));
+      pointer-events:none;
+    }
+
+    /* FACTS */
+    .facts{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      padding:18px;
+      border-top:1px solid rgba(34,49,70,.75);
+      background: rgba(255,255,255,.02);
+    }
+    .fact{
+      border:1px solid rgba(34,49,70,.75);
+      background: rgba(255,255,255,.03);
+      border-radius:16px;
+      padding:14px;
+    }
+    .fact b{display:block; font-size:16px}
+    .fact span{display:block; color:var(--muted); font-size:13px; margin-top:4px}
+
+    /* GRIDS */
+    .grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap:14px}
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+    .card{
+      border:1px solid rgba(34,49,70,.75);
+      background: rgba(255,255,255,.03);
+      border-radius:16px;
+      padding:18px;
+    }
+    .card ul{margin:10px 0 0 18px; color:var(--muted)}
+    .fine{color:var(--muted); font-size:13px; margin-top:10px}
+
+    /* SPONSOR TIERS */
+    .tiers{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+    .tier h3{margin:0 0 6px; font-size:18px}
+    .tier .price{font-weight:900; font-size:22px}
+    .tier ul{margin:10px 0 0 18px; color:var(--muted)}
+
+    /* GALLERY */
+    .galleryGrid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      margin-top:12px;
+    }
+    .galleryItem{
+      border:1px solid rgba(34,49,70,.75);
+      background: rgba(255,255,255,.03);
+      border-radius:16px;
+      overflow:hidden;
+    }
+    .galleryItem img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+      aspect-ratio: 4/3;
+    }
+    .galleryCap{
+      padding:10px 12px;
+      border-top:1px solid rgba(34,49,70,.55);
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    footer{
+      border-top:1px solid rgba(34,49,70,.6);
+      color:var(--muted);
+      padding:26px 18px 44px;
+    }
+    .footWrap{max-width:var(--max); margin:0 auto; display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap}
+
+    @media (max-width: 980px){
+      h1{font-size:38px}
+      .hero{grid-template-columns:1fr}
+      .heroMedia{border-left:none; border-top:1px solid rgba(34,49,70,.75); min-height:340px}
+      .facts{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+      .tiers{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
+      .galleryGrid{grid-template-columns:1fr}
+    }
   </style>
 </head>
 
 <body>
-  <div class="topbar">
-    <div class="inner">
-      <div class="brand">
-        <span class="dot"></span>
-        <span>AAF Elite Golf</span>
-      </div>
-      <nav>
-        <a href="#sponsorship">Sponsorship</a>
-        <a href="#standards">Standards</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<header>
+  <div class="nav">
+    <div class="brand">
+      <div class="logo">AAF</div>
+      <div>AAF Elite Golf</div>
+    </div>
+    <div class="links">
+      <a href="#highlights">Highlights</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#sponsorship">Sponsorship</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
+</header>
 
-  <div class="wrap">
-    <header class="hero">
-      <div class="heroCard">
-        <div class="kicker"><span></span> Osceola County Partnerships</div>
-        <h1>Business Partnership Opportunities</h1>
+<main class="wrap">
+
+  <!-- HERO -->
+  <section class="panel">
+    <div class="hero">
+      <div class="heroText">
+        <div class="kicker">Sponsorship Partnership Opportunity</div>
+        <h1>Ayden A. Febres</h1>
         <p class="sub">
-          AAF Elite Golf offers a limited number of partnership opportunities for Osceola County businesses
-          interested in supporting the competitive development of an elite junior golfer.
+          AAF Elite Golf supports Ayden’s competitive development through state, national, and international junior golf.
+          Sponsorships directly fund tournament travel, coaching, and high-performance training.
         </p>
 
-        <div class="metaRow">
-          <div class="pill"><b>Model:</b> Professional partnership • Not a donation request</div>
-          <div class="pill"><b>Athlete:</b> Ayden A. Febres</div>
-          <div class="pill"><b>Competition:</b> High school, national &amp; international</div>
+        <div class="cta">
+          <a class="btn alt" href="#sponsorship">View Sponsorship Opportunities</a>
+          <a class="btn ghost" href="#contact">Contact AAF Elite Golf</a>
+          <a class="btn" href="https://instagram.com/ayden_febres" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+
+        <p class="fine">St. Cloud, Florida • AJGA • FSGA • Florida Junior Tour • Team USA experience</p>
+      </div>
+
+      <div class="heroMedia" aria-label="Ayden photo">
+        <img src="./ayden.jpg" alt="Ayden A. Febres holding trophy" />
+      </div>
+    </div>
+
+    <div class="facts">
+      <div class="fact">
+        <b>Home Base</b>
+        <span>St. Cloud, Florida</span>
+      </div>
+      <div class="fact">
+        <b>Support Goal</b>
+        <span>$50,000 for tournament travel + coaching</span>
+      </div>
+      <div class="fact">
+        <b>Academics</b>
+        <span>Florida Virtual High School • A/B Honor Roll (All A’s)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section id="highlights" class="section panel">
+    <div class="pad">
+      <h2>Competitive Highlights</h2>
+      <div class="grid3" style="margin-top:12px">
+        <div class="card">
+          <b>AJGA Result</b>
+          <div class="fine">T-5 — Discover Puerto Rico Junior Championship (AJGA)</div>
+        </div>
+        <div class="card">
+          <b>Florida Junior Tour</b>
+          <div class="fine">FJT Tour Championship — Winner</div>
+        </div>
+        <div class="card">
+          <b>International Team Win</b>
+          <div class="fine">Represented Team USA in France (Sept 2024) — Team Win</div>
         </div>
       </div>
-    </header>
 
-    <section id="sponsorship">
-      <h2 class="sectionTitle">Sponsorship Opportunities</h2>
-      <p class="sectionLead">
-        These partnerships are <b>not influencer-style advertising</b>. They are professional alignments designed
-        to reflect shared values such as discipline, performance, and long-term commitment.
+      <div class="grid2" style="margin-top:14px">
+        <div class="card">
+          <h2 style="margin:0 0 8px">High School & Community</h2>
+          <ul>
+            <li>Record-setting high school season with local coverage</li>
+            <li>County record broken (standing since 1996 — per reporting)</li>
+            <li>Postseason performances supporting team success</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 style="margin:0 0 8px">State & Media Validation</h2>
+          <ul>
+            <li>Team Florida selection (Florida State Golf Association)</li>
+            <li>GolfPass docuseries feature (“Home Course Advantage”)</li>
+            <li>Competes in top junior events across Florida and beyond</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section panel">
+    <div class="pad">
+      <h2>Gallery</h2>
+      <p class="sub">Tournament moments, podium finishes, and key milestones.</p>
+
+      <!-- Hero image is ayden.jpg. Below are 6 additional images. -->
+      <div class="galleryGrid">
+        <div class="galleryItem">
+          <img src="./ayden-1.jpg" alt="Ayden A. Febres tournament action" />
+          <div class="galleryCap">Tournament action</div>
+        </div>
+        <div class="galleryItem">
+          <img src="./ayden-2.jpg" alt="Ayden A. Febres approach shot" />
+          <div class="galleryCap">Competition</div>
+        </div>
+        <div class="galleryItem">
+          <img src="./ayden-3.jpg" alt="Ayden A. Febres trophy presentation" />
+          <div class="galleryCap">Trophy / podium</div>
+        </div>
+     
+
+      <p class="fine">
+        To activate the gallery, upload 3 image files to your GitHub repo (same folder as index.html) named:
+        <b>ayden-1.jpg</b>, <b>ayden-2.jpg</b>, <b>ayden-3.jpg</b>.
+      </p>
+    </div>
+  </section>
+
+  <!-- RECOGNITION / LINKS -->
+  <section id="recognition" class="section panel">
+    <div class="pad">
+      <h2>Verified Coverage & Recognition</h2>
+      <div class="grid2" style="margin-top:12px">
+        <div class="card">
+          <b>FSGA</b>
+          <ul>
+            <li>
+              <a href="https://www.fsga.org/sections/content/2026-Team-FSGA/1959" target="_blank" rel="noopener noreferrer">
+                Team Florida (FSGA) — Selection Page
+              </a>
+            </li>
+          </ul>
+          <div class="fine">Third-party validation from Florida’s governing golf association.</div>
+        </div>
+
+        <div class="card">
+          <b>Local Coverage</b>
+          <ul>
+            <li>
+              <a href="https://www.positivelyosceola.com/st-cloud-freshman-ayden-febres-fires-7-under-65-to-win-regionals-bulldogs-punch-ticket-to-state-championships/" target="_blank" rel="noopener noreferrer">
+                7-under 65 to Win Regionals
+              </a>
+            </li>
+            <li>
+              <a href="https://www.positivelyosceola.com/st-cloud-bulldogs-shatter-county-and-school-records-to-capture-7a-6-title-in-boys-golf-at-royal-st-cloud-golf-links/" target="_blank" rel="noopener noreferrer">
+                Bulldogs Shatter County & School Records
+              </a>
+            </li>
+          </ul>
+          <div class="fine">Community and high school performance recognition.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSORSHIP -->
+  <section id="sponsorship" class="section panel">
+    <div class="pad">
+      <h2>Sponsorship</h2>
+      <p class="sub">
+        Sponsorship partners align with a proven, high-character junior athlete while supporting elite competition,
+        professional coaching, and national-level exposure.
       </p>
 
-      <div class="grid">
-        <div class="card tier1">
-          <h3>Community Partner — <span class="price">$1,500</span></h3>
-          <p class="muted">
-            This level is designed for businesses that want to support a high-performing local student-athlete
-            and be recognized as part of the AAF Elite Golf community.
-          </p>
-          <p class="muted">
-            Community Partners receive professional recognition through AAF Elite Golf and are associated with
-            Ayden’s competitive program in a clean, respectful way.
-          </p>
-          <p class="muted">
-            Ideal for businesses that value local pride, youth development, and excellence — without advertising
-            or endorsements.
-          </p>
-          <span class="tag">Local pride • Clean association</span>
+      <div class="tiers" style="margin-top:14px">
+        <div class="card tier">
+          <h3>Community Supporter</h3>
+          <div class="price">$500</div>
+          <ul>
+            <li>Name listed on sponsor page</li>
+            <li>Thank-you mention on social media</li>
+            <li>Quarterly email update</li>
+          </ul>
         </div>
 
-        <div class="card tier2">
-          <h3>Performance Partner — <span class="price">$3,500</span></h3>
-          <p class="muted">
-            Performance Partners take a more visible role in supporting Ayden’s competitive golf journey.
-          </p>
-          <p class="muted">
-            This level reflects the preparation, consistency, and discipline required to compete at an elite level
-            and provides elevated recognition within AAF Elite Golf materials connected to Ayden’s program.
-          </p>
-          <p class="muted">
-            Well suited for businesses that identify with performance, growth, and long-term commitment.
-          </p>
-          <span class="tag">Elevated recognition • Performance</span>
+        <div class="card tier">
+          <h3>Bronze Sponsor</h3>
+          <div class="price">$1,000</div>
+          <ul>
+            <li>All Community Supporter benefits</li>
+            <li>Logo/name placement on sponsor materials</li>
+            <li>Season recap recognition</li>
+          </ul>
         </div>
 
-        <div class="card tier3">
-          <h3>County Anchor Partner (Limited) — <span class="price">$7,500–$10,000+</span></h3>
-          <p class="muted">
-            County Anchor Partners represent a small group of Osceola County businesses closely aligned with AAF Elite Golf.
-          </p>
-          <p class="muted">
-            This level may include limited logo placement on apparel or equipment during select competitive events,
-            where permitted and appropriate, along with category exclusivity.
-          </p>
-          <p class="muted">
-            Designed for businesses seeking a premium, high-integrity association with one of the area’s most promising
-            young athletes.
-          </p>
-          <span class="tag">Limited • Category exclusivity</span>
+        <div class="card tier">
+          <h3>Silver Sponsor</h3>
+          <div class="price">$2,500</div>
+          <ul>
+            <li>All Bronze Sponsor benefits</li>
+            <li>Featured placement on sponsor page</li>
+            <li>Major-result update notifications</li>
+          </ul>
         </div>
       </div>
-    </section>
 
-    <section id="standards">
-      <h2 class="sectionTitle">Professional Standards</h2>
-      <div class="card standards">
-        <p class="sectionLead" style="margin-bottom:0;">
-          AAF Elite Golf partnerships are structured to maintain professionalism and protect the integrity of the athlete.
-        </p>
+      <div class="card" style="margin-top:14px">
+        <h2 style="margin:0 0 8px">Where Sponsorship Funds Go</h2>
         <ul>
-          <li>Ayden does not engage in scripted endorsements or promotional messaging for businesses.</li>
-          <li>No influencer-style marketing or personal advertising.</li>
-          <li>Select County Anchor partnerships may include limited logo placement on apparel or equipment, where permitted and appropriate.</li>
-          <li>All recognition is handled professionally through AAF Elite Golf.</li>
-          <li>Partnerships emphasize alignment and representation — not advertising.</li>
+          <li>Tournament travel (flights, hotels, rental car, entry fees)</li>
+          <li>Coaching and player development</li>
+          <li>Training and preparation aligned with elite competition</li>
         </ul>
+        <p class="fine">Florida-wide corporate tiers ($5,000–$25,000+) available upon request.</p>
       </div>
-    </section>
 
-    <footer id="contact">
-      <div class="footerGrid">
-        <div class="card col8">
-          <h2 class="sectionTitle" style="margin-bottom:6px;">Contact</h2>
-          <p class="muted" style="margin:0 0 10px;">
-            For partnership inquiries, please reach out below.
-          </p>
-          <p style="margin:0;">
-            <b>AAF Elite Golf</b><br/>
-            Email: <a href="mailto:aafelitegolf@gmail.com">aafelitegolf@gmail.com</a><br/>
-            Website: <a href="https://aafelitegolf.github.io/aaf-elite-golf/" target="_blank" rel="noopener">https://aafelitegolf.github.io/aaf-elite-golf/</a><br/>
-            Location: St. Cloud, Florida
-          </p>
+      <div class="cta">
+        <a class="btn alt" href="#contact">Contact for Corporate Tiers</a>
+      </div>
+    </div>
+  </section>
 
-          <div class="btnRow">
-            <a class="btn primary" href="mailto:aafelitegolf@gmail.com?subject=AAF%20Elite%20Golf%20Partnership%20Inquiry">Email AAF Elite Golf</a>
-            <a class="btn" href="#sponsorship">View Partnership Levels</a>
+  <!-- CONTACT -->
+  <section id="contact" class="section panel">
+    <div class="pad">
+      <h2>Contact</h2>
+      <p class="sub">To request sponsorship details or discuss partnership options, contact AAF Elite Golf.</p>
+
+      <div class="grid2" style="margin-top:12px">
+        <div class="card">
+          <b>Email</b>
+          <div class="fine" style="margin-top:6px">
+            <a href="mailto:E.febressr@yahoo.com">E.febressr@yahoo.com</a>
           </div>
         </div>
-
-        <div class="card col4">
-          <h2 class="sectionTitle" style="margin-bottom:6px;">Note</h2>
-          <p class="muted" style="margin:0;">
-            Partnership details and payment options are shared directly by email to keep the process simple and professional.
-          </p>
+        <div class="card">
+          <b>Phone</b>
+          <div class="fine" style="margin-top:6px">
+            <a href="tel:+14078197953">407-819-7953</a>
+          </div>
         </div>
       </div>
-    </footer>
+
+      <div class="cta">
+        <a class="btn alt" href="mailto:E.febressr@yahoo.com?subject=AAF%20Elite%20Golf%20Sponsorship%20Inquiry&body=Hello%2C%0A%0AI%E2%80%99m%20interested%20in%20sponsoring%20Ayden%20A.%20Febres%20through%20AAF%20Elite%20Golf.%0A%0AName%3A%0ABusiness%3A%0APhone%3A%0AInterested%20tier%3A%0A%0AThank%20you%2C">
+          Email Sponsorship Inquiry
+        </a>
+        <a class="btn" href="https://instagram.com/ayden_febres" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footWrap">
+    <div><b>AAF Elite Golf</b><div class="fine">Supporting the competitive development of Ayden A. Febres.</div></div>
+    <div class="fine">© <span id="y"></span> AAF Elite Golf • All rights reserved</div>
   </div>
+</footer>
 
-
-
-
-
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
